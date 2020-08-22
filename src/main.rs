@@ -15,9 +15,9 @@ fn search(cmd: String) -> Redirect {
     println!("cmd: {}", cmd);
     let command = utils::get_cmd_from_query(&cmd);
     let redirect_url = match command {
-        "tw" => String::from("https://twitter.com"),
+        "tw" => utils::twitter::construct_twitter_url(&cmd),
         "gl" => String::from("https://gitlab.com"),
-        _ => String::from("https://google.com")
+        _ => utils::google::construct_google_search_url(&cmd)
     };        
     Redirect::to(redirect_url)
 }
