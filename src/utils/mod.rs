@@ -1,5 +1,6 @@
 pub mod google;
 pub mod twitter;
+pub mod gitlab;
 
 pub fn get_cmd_from_query(query: &str) -> &str {
     if query.contains(' ') {
