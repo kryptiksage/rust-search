@@ -2,7 +2,7 @@ pub mod google;
 pub mod twitter;
 pub mod gitlab;
 pub mod github;
-
+pub mod duckduckgo;
 pub fn get_cmd_from_query(query: &str) -> &str {
     if query.contains(' ') {
         let index_of_space = query.find(' ').unwrap_or(0);
