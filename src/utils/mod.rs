@@ -1,3 +1,4 @@
+pub mod startpage;
 pub mod google;
 pub mod twitter;
 pub mod gitlab;
